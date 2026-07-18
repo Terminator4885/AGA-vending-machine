@@ -1225,7 +1225,7 @@ button { font-family: var(--font); cursor: pointer; border: none; transition: al
       </button>
       <button class="style-btn" id="styleBtn8" data-style="glass">
         <span class="style-btn-icon">🫧</span>
-        <span class="style-btn-name">Glass morphism</span>
+        <span class="style-btn-name">Glass 990</span>
         <span class="style-btn-desc">반투명 블러 플랫 3D</span>
       </button>
       <button class="style-btn style-btn--soon" id="styleBtn9" disabled>
@@ -1974,12 +1974,6 @@ This is the single most important rule and it differs from ordinary 3D rendering
 - Depth comes from LAYERING and slight tilt, not from volume: shapes float and overlap at gentle angles
 - Silhouette is essentially the flat 2D icon shape, given just enough thickness to feel physical
 
-1.5 [Camera Angle — Straight Front-Facing Lock]
-- The icon as a whole must be composed and framed as a STRAIGHT-ON, FRONT-FACING view — the subject faces directly toward the viewer/camera, dead center, as if photographed head-on
-- Do NOT use a 3/4 perspective, side profile, bird's-eye, worm's-eye, or diagonally rotated camera angle for the overall composition. No camera tilt, no perspective skew of the whole icon
-- Individual panels may still be gently offset, rotated a few degrees, or floated apart from each other for the layered depth effect described below — but this is a LOCAL offset between panels, not a rotation of the overall camera/subject. The final silhouette, read head-on, must still clearly present the subject's most recognizable frontal view
-- Choose the frontal orientation of the subject that is most iconic and instantly recognizable when viewed straight-on (e.g. a front view for symmetric objects/faces/vehicles, the most identifiable flat face for other objects)
-
 2. [Frosted Glass Material — Absolute Lock]
 - Translucent frosted glass: semi-transparent, with soft internal light diffusion and a gentle blur, so overlapping layers show through each other softly out of focus
 - Surface is perfectly smooth and immaculate — but with a SOFT MATTE SHEEN, NOT a wet gloss. Absolutely no sharp mirror-like specular hot spots, no glossy plastic highlights, no chrome
@@ -1987,31 +1981,33 @@ This is the single most important rule and it differs from ordinary 3D rendering
 - Crisp, thin, slightly brighter light catching along the extruded edges and rounded corners, with a faint cool iridescent rim
 - Clean and pristine — no scratches, dust, fingerprints, cracks or wear
 
-3. [Layered Composition — The Core Look]
-- Build the icon from 2 to 3 overlapping elements: typically a more saturated solid-color shape sitting behind, and a lighter frosted translucent panel floating in front of it, slightly offset and rotated
-- The rear shape reads clearly but softly through the frosted panel in front
-- Gentle tilt and floating separation between layers, with soft contact shadows cast between them
-- Keep the arrangement calm, balanced and uncluttered — never busy
+3. [Layered Composition — Icon Stays In Front and Fully Readable]
+- The element that DEFINES the subject — the icon shape itself — must be the FRONT-MOST layer. It is never covered, veiled, tinted or blurred by anything placed on top of it
+- Absolutely NO translucent panel, sheet, card or pane floating IN FRONT of the icon. Nothing may obscure, wash out or soften the subject's defining features. The viewer must recognise the subject instantly at a glance
+- Supporting frosted panels and abstract shapes sit BEHIND the icon as backdrop accents, peeking out around its edges — offset and slightly rotated so they add depth without hiding anything
+- Where a background panel passes behind the icon it may show through the icon's own translucent glass softly and out of focus — that layered see-through richness is welcome, because it reads THROUGH the icon rather than ON TOP of it
+- Keep it to 2 or 3 elements total, calm, balanced and uncluttered — never busy
 
-3.5 [Recognizability Lock — Never Obscure the Subject]
-- CRITICAL: the frosted translucent front panel must NEVER cover, crop, or blur out the key identifying silhouette, defining details, or "tell" features of the subject — the parts that make it instantly readable as that specific object
-- Position and size the front frosted panel so it overlaps a secondary, non-essential area of the composition (a corner, an edge, background negative space) rather than sitting directly on top of the subject's most recognizable feature
-- The subject's core identifying shape must remain legible even where materials overlap — the frosted panel may soften and blur what's directly behind it, but it must not be placed where doing so would hide the one detail needed to recognize the object
-- Even with 2-3 translucent layers overlapping naturally, the finished icon must be identifiable at a single glance — if in doubt, shrink, reposition, or reduce the opacity of the front panel rather than let it mask the subject
+4. [Camera — Straight-On Front View]
+- The camera looks at the icon HEAD-ON, square to its face. Front elevation only
+- NO three-quarter view, no isometric angle, no rotating the subject away from the viewer, no looking down or up at it
+- The icon's face is parallel to the picture plane and fully presented to the camera
+- Only a very mild perspective is allowed, just enough that a thin sliver of the extruded side edge reads at the outer contours and the layer separation is felt
+- Gentle rotation WITHIN the picture plane (tilting a panel like a tilted card, still facing the camera) is allowed for liveliness
 
-4. [Color]
+5. [Color]
 - Cool, clean, luminous palette: periwinkle blue, soft violet, lavender, sky blue, white
 - Smooth soft gradients within each panel, generally lighter toward the top and edges
 - Optional small accent in a deeper blue or soft pink, used sparingly
 - Overall impression must be LIGHT, CLEAR and FRESH — never dark, never heavy, never neon, never candy-glossy
 
-5. [Rounded Geometry]
+6. [Rounded Geometry]
 Generous, evenly rounded corners and softened edges throughout — friendly, modern, calm UI geometry. No sharp points, no aggressive angles.
 
-6. [Text, Logo, Stand — Zero Tolerance]
+7. [Text, Logo, Stand — Zero Tolerance]
 Absolutely NO text, letters, words, numbers, branding, logos, or watermarks anywhere. NO stands, plinths, bases, or background elements. The background MUST be pure solid white #FFFFFF (RGB 255,255,255) with absolutely no tint — no cream, no ivory, no beige, no off-white, no gray studio falloff, no gradient. Only the icon and a soft, diffused drop shadow.
 
-7. [No Dynamic Effects & Singular Unit]
+8. [No Dynamic Effects & Singular Unit]
 Static, pristine form only. No smoke, sparks, motion blur, or particles. Exactly one icon asset, centered. Visual mass must occupy 75-80% of the 1:1 square frame. Soft, bright, even diffused studio lighting that reveals the frosted translucency and the edge highlights without creating glossy hot spots. Only the icon and a soft, blurred drop shadow permitted.`;
 
 function buildGlassPrompt(keyword, hasRefImage) {
@@ -2025,7 +2021,7 @@ ${imageNote}
 Now generate the following as a Frosted Glass UI icon asset:
 Object: "${keyword}"
 
-A premium 3D app icon asset of ${keyword}, simplified into a clean symbolic UI-icon shape and built from translucent frosted glass panels, FLAT LAYERED SLAB construction with modest crisp extruded edge thickness like thin glass cards (NOT a rounded volumetric object, NOT a chunky toy, NOT a sculpted miniature — depth comes from layering and gentle tilt rather than volume), camera angle: STRAIGHT-ON FRONT-FACING VIEW — the subject faces directly toward the viewer dead center, NOT a 3/4 view, NOT tilted, NOT rotated, choose the most iconic frontal orientation of ${keyword} so it reads instantly when viewed head-on, 2 to 3 overlapping elements with a more saturated solid-color shape behind and a lighter frosted translucent panel floating in front slightly offset and rotated, the frosted front panel positioned over a secondary non-essential area (corner or edge) so it NEVER covers or hides the key identifying silhouette or defining details of ${keyword} — the core recognizable shape must stay clearly visible and unobstructed even as the materials overlap, rear shape reading softly and out of focus through the frosted panel without losing overall recognizability, semi-transparent frosted glass with soft internal light diffusion and gentle blur, immaculately smooth surface with a SOFT MATTE SHEEN and absolutely no wet gloss or mirror specular hot spots, thin brighter light catching along the extruded edges and rounded corners with a faint cool iridescent rim, cool clean luminous palette of periwinkle blue and soft violet and lavender and white with smooth soft gradients, generous evenly rounded corners and softened edges, calm balanced uncluttered composition, light and clear and fresh feeling, instantly identifiable as ${keyword} at a single glance, soft bright even diffused studio lighting, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft diffused blurred drop shadow, 1:1 square format, icon occupying 75-80% of frame, premium mobile app illustration asset quality, absolutely no text no letters no numbers no logo no watermark no stand no background elements.`;
+A premium 3D app icon asset of ${keyword}, simplified into a clean symbolic UI-icon shape and built from translucent frosted glass panels, FLAT LAYERED SLAB construction with modest crisp extruded edge thickness like thin glass cards (NOT a rounded volumetric object, NOT a chunky toy, NOT a sculpted miniature — depth comes from layering rather than volume), the ${keyword} icon shape itself is the FRONT-MOST layer and stays completely unobstructed and instantly recognizable (absolutely NO translucent panel or sheet or card floating in front of it, nothing covering or veiling or blurring its defining features), 2 to 3 elements total with supporting frosted panels and abstract shapes sitting BEHIND the icon as backdrop accents peeking out around its edges slightly offset and rotated, background panels reading softly and out of focus THROUGH the icon's own translucent glass rather than on top of it, straight-on head-on front view with the icon's face square and parallel to the camera (NO three-quarter view, no isometric angle, no looking down or up, only a very mild perspective so a thin sliver of the extruded side edge reads at the outer contours), semi-transparent frosted glass with soft internal light diffusion and gentle blur, immaculately smooth surface with a SOFT MATTE SHEEN and absolutely no wet gloss or mirror specular hot spots, thin brighter light catching along the extruded edges and rounded corners with a faint cool iridescent rim, cool clean luminous palette of periwinkle blue and soft violet and lavender and white with smooth soft gradients, generous evenly rounded corners and softened edges, calm balanced uncluttered composition, light and clear and fresh feeling, soft bright even diffused studio lighting, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft diffused blurred drop shadow, 1:1 square format, icon occupying 75-80% of frame, premium mobile app illustration asset quality, absolutely no text no letters no numbers no logo no watermark no stand no background elements.`;
 }
 
 function buildPrompt(keyword, hasRefImage) {
@@ -2129,7 +2125,7 @@ const STYLE_LABELS = {
   brick:      '🧱 Brick — 레고 블록 조립',
   furball:    '🌸 Furball — 장모 털뭉치',
   bricolage:  '🚀 Bricolage — 핸드메이드 스페이스 공작',
-  glass:      '🫧 Glass — 반투명 블러 플랫 3D',
+  glass:      '🫧 Glass 990 — 반투명 블러 플랫 3D',
 };
 
 document.querySelectorAll('.style-btn:not(:disabled)').forEach(btn => {
@@ -2298,7 +2294,7 @@ const CONCEPT_PROMPTS = {
 
 재질, 유리, 색상, 투명도 설명은 하지 말고, 아래 두 가지만 한국어로 간결하게:
 1. 형태 — "${kw}"를 UI 아이콘 디자이너가 단순화한다면 어떤 상징적인 평면 실루엣이 가장 알아보기 쉬운지
-2. 구성 — 그 형태를 2~3개의 판으로 나눈다면 어떻게 겹치고 배치하는 게 좋은지 (뒤쪽 판 / 앞쪽 판의 역할)
+2. 구성 — 그 아이콘 형태를 맨 앞에 두고, 뒤쪽에 어떤 보조 도형을 어떻게 겹쳐 두면 깊이감이 생길지 (아이콘을 가리지 않는 선에서)
 
 2~3문장으로 짧고 명확하게. 반드시 완전한 문장으로 끝낼 것.`,
 };
