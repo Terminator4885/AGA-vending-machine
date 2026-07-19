@@ -1228,10 +1228,10 @@ button { font-family: var(--font); cursor: pointer; border: none; transition: al
         <span class="style-btn-name">Glass 990</span>
         <span class="style-btn-desc">반투명 블러 플랫 3D</span>
       </button>
-      <button class="style-btn style-btn--soon" id="styleBtn9" disabled>
-        <span class="style-btn-icon">✦</span>
-        <span class="style-btn-name">Coming Soon</span>
-        <span class="style-btn-desc">준비 중</span>
+      <button class="style-btn" id="styleBtn9" data-style="clay">
+        <span class="style-btn-icon">🐑</span>
+        <span class="style-btn-name">Clay</span>
+        <span class="style-btn-desc">월레스와 그로밋 클레이</span>
       </button>
     </div>
   </div>
@@ -1402,6 +1402,11 @@ button { font-family: var(--font); cursor: pointer; border: none; transition: al
       lightA:[120, 150, 255],
       lightB:[175, 165, 250],
     },
+    clay: { // 블랙 & 따뜻한 플라스티신 (테라코타 ↔ 올리브 그린)
+      dark:  [18, 12, 8],
+      lightA:[200, 120, 80],
+      lightB:[150, 160, 90],
+    },
   };
   const DEFAULT_STYLE = 'gameboy';
 
@@ -1432,6 +1437,7 @@ button { font-family: var(--font); cursor: pointer; border: none; transition: al
       furball:   'linear-gradient(160deg, #0e090f 0%, #3a1e38 55%, #070509 100%)',
       bricolage: 'linear-gradient(160deg, #0b0b0c 0%, #33302c 55%, #060606 100%)',
       glass:     'linear-gradient(160deg, #080a14 0%, #1e2a58 55%, #05060c 100%)',
+      clay:      'linear-gradient(160deg, #100a06 0%, #3a2416 55%, #080605 100%)',
     };
     const apply = (s) => { document.documentElement.style.background = FALLBACK[s] || FALLBACK.gameboy; };
     apply(DEFAULT_STYLE);
@@ -1684,7 +1690,7 @@ ${imageNote}
 Now generate the following as a photorealistic hard enamel pin badge:
 Object: "${keyword}"
 
-A photorealistic hard enamel pin badge of ${keyword}, polished warm gold metal cloisonne outline walls with realistic metallic reflections and beveled physical thickness, smooth glassy enamel fill areas with real material depth and surface tension (slightly convex surface), natural specular reflections on both gold metal and enamel surfaces (NOT cartoon highlights), rich saturated enamel color palette (max 4-5 colors), soft warm drop shadow x:10 y:10 beneath the badge on white surface, TOP-DOWN BIRD'S EYE CAMERA VIEW — camera directly above looking straight down at badge lying flat (badge perfectly flat in frame), the OBJECT DESIGN inside the badge shown at its most naturally recognizable angle (3/4 diagonal for vehicles/animals/shoes, front-facing for faces/food/symbols — choose whichever makes ${keyword} most instantly recognizable), studio key lighting top-left, 1:1 square format, badge occupying 70-80% of frame, photorealistic product photography quality — looks like a real purchasable collectible hard enamel pin badge, absolutely no text no logo no watermark no pin clasp visible.`;
+A photorealistic hard enamel pin badge of ${keyword}, polished warm gold metal cloisonne outline walls with realistic metallic reflections and beveled physical thickness, smooth glassy enamel fill areas with real material depth and surface tension (slightly convex surface), natural specular reflections on both gold metal and enamel surfaces (NOT cartoon highlights), rich saturated enamel color palette (max 4-5 colors), soft warm drop shadow x:10 y:10 beneath the badge on white surface, TOP-DOWN BIRD'S EYE CAMERA VIEW — camera directly above looking straight down at badge lying flat (badge perfectly flat in frame), the OBJECT DESIGN inside the badge shown at its most naturally recognizable angle (3/4 diagonal for vehicles/animals/shoes, front-facing for faces/food/symbols — choose whichever makes ${keyword} most instantly recognizable), studio key lighting top-left, 1:1 square format, badge occupying 70-80% of frame, photorealistic product photography quality — looks like a real purchasable collectible hard enamel pin badge, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface), no logo no watermark no pin clasp visible.`;
 }
 
 
@@ -1739,7 +1745,7 @@ ${imageNote}
 Now generate the following as a Beige & Yellow Fabric Patchwork 3D object:
 Object: "${keyword}"
 
-A photorealistic premium 3D patchwork fabric object of ${keyword}, re-engineered entirely as a soft cotton-stuffed plush with beige-and-yellow fabric patchwork surface, STRICTLY ONLY cream/off-white/warm beige/muted mustard yellow tones (absolutely NO other colors), multiple fabric patch types (linen canvas texture, suede matte, cotton quilting) stitched together, visible quilting stitch grid lines on every patch, hand-stitching seams in mustard yellow thread, slightly puffy raised patches stuffed with batting, soft rounded plump 3D form, warm diffused studio lighting emphasizing tactile fabric texture, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient — the background must be brighter and whiter than the cream fabric object so they stay clearly separated), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium handcraft product photography quality, most naturally recognizable angle for ${keyword}, absolutely no text no logo no watermark no stand no background elements.`;
+A photorealistic premium 3D patchwork fabric object of ${keyword}, re-engineered entirely as a soft cotton-stuffed plush with beige-and-yellow fabric patchwork surface, STRICTLY ONLY cream/off-white/warm beige/muted mustard yellow tones (absolutely NO other colors), multiple fabric patch types (linen canvas texture, suede matte, cotton quilting) stitched together, visible quilting stitch grid lines on every patch, hand-stitching seams in mustard yellow thread, slightly puffy raised patches stuffed with batting, soft rounded plump 3D form, warm diffused studio lighting emphasizing tactile fabric texture, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient — the background must be brighter and whiter than the cream fabric object so they stay clearly separated), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium handcraft product photography quality, most naturally recognizable angle for ${keyword}, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface), no logo no watermark no stand no background elements.`;
 }
 
 const CHOCOLATE_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Decadent Chocolate Cake' aesthetic — inspired by the legendary, impossibly rich chocolate cake from the movie Matilda: dense, fudgy, glistening, and irresistibly indulgent.
@@ -1792,7 +1798,7 @@ ${imageNote}
 Now generate the following as a Decadent Chocolate Cake object:
 Object: "${keyword}"
 
-A photorealistic premium chocolate cake sculpted in the form of ${keyword}, re-engineered entirely as an outrageously rich Matilda-style chocolate cake, moist dark chocolate sponge crumb beneath thick ultra-fudgy glossy chocolate frosting, heavy gooey almost-molten frosting with luscious slow drips and thick spatula swirls catching soft glistening highlights, deep dark cocoa-rich brown tones dominating, decorated with colorful candy-coated chocolate buttons in red yellow blue green orange pressed into the frosting as the only vivid accents, chocolate shavings and curls, decoration following the subject's silhouette without obscuring it, warm soft diffused studio lighting making the chocolate look wet and mouthwatering and decadent, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium food photography quality, most naturally recognizable angle for ${keyword}, absolutely no text no logo no watermark no lettering no plate no cake stand no background elements.`;
+A photorealistic premium chocolate cake sculpted in the form of ${keyword}, re-engineered entirely as an outrageously rich Matilda-style chocolate cake, moist dark chocolate sponge crumb beneath thick ultra-fudgy glossy chocolate frosting, heavy gooey almost-molten frosting with luscious slow drips and thick spatula swirls catching soft glistening highlights, deep dark cocoa-rich brown tones dominating, decorated with colorful candy-coated chocolate buttons in red yellow blue green orange pressed into the frosting as the only vivid accents, chocolate shavings and curls, decoration following the subject's silhouette without obscuring it, warm soft diffused studio lighting making the chocolate look wet and mouthwatering and decadent, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium food photography quality, most naturally recognizable angle for ${keyword}, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface) (no piped icing lettering), no logo no watermark no plate no cake stand no background elements.`;
 }
 
 const BRICK_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Toy Brick Build' aesthetic — every subject rebuilt as a model assembled from interlocking plastic construction bricks, in the spirit of a premium LEGO-style display set.
@@ -1844,7 +1850,7 @@ ${imageNote}
 Now generate the following as a Toy Brick Build object:
 Object: "${keyword}"
 
-A photorealistic premium toy model of ${keyword}, re-engineered entirely as a model assembled from interlocking plastic construction bricks in the spirit of a LEGO-style display set, injection-moulded ABS plastic with semi-gloss satin sheen, clearly visible cylindrical studs on upward-facing surfaces with completely blank smooth stud tops, crisp visible seam lines between individual bricks revealing how the model is assembled, honest stepped blocky voxel geometry where curves are approximated by stacked bricks and slope/wedge pieces, believable mix of standard bricks plates tiles and slopes, flat solid uniform molded color per brick with no gradients or painting across bricks, bright saturated primary toy palette suited to the subject, slightly rounded brick edges with subtle moulding highlights and tiny realistic micro-scratches, instantly recognizable silhouette despite the blocky construction, clean soft studio lighting revealing stud and seam detail, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium toy product photography quality, most naturally recognizable angle for ${keyword}, absolutely no text no numbers no logo no branding on studs no watermark no baseplate no stand no box no background elements.`;
+A photorealistic premium toy model of ${keyword}, re-engineered entirely as a model assembled from interlocking plastic construction bricks in the spirit of a LEGO-style display set, injection-moulded ABS plastic with semi-gloss satin sheen, clearly visible cylindrical studs on upward-facing surfaces with completely blank smooth stud tops, crisp visible seam lines between individual bricks revealing how the model is assembled, honest stepped blocky voxel geometry where curves are approximated by stacked bricks and slope/wedge pieces, believable mix of standard bricks plates tiles and slopes, flat solid uniform molded color per brick with no gradients or painting across bricks, bright saturated primary toy palette suited to the subject, slightly rounded brick edges with subtle moulding highlights and tiny realistic micro-scratches, instantly recognizable silhouette despite the blocky construction, clean soft studio lighting revealing stud and seam detail, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium toy product photography quality, most naturally recognizable angle for ${keyword}, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface) (studs completely blank), no logo no branding on studs no watermark no baseplate no stand no box no background elements.`;
 }
 
 const FURBALL_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Furball' aesthetic — every subject reimagined as a soft, fluffy creature-like object entirely covered in long, silky, luxurious fur, in bright airy pastel tones, with a few delicate flowers tucked into the coat as accents.
@@ -1899,7 +1905,7 @@ ${imageNote}
 Now generate the following as a Furball object:
 Object: "${keyword}"
 
-A photorealistic premium 3D render of ${keyword}, re-engineered entirely as a soft fluffy furball completely covered in LONG silky flowing fur, long individually-resolved hair strands with soft directional flow grouping into natural wisps and locks, strands cascading and draping over the form's contours with gentle gravity, wispy feathery flyaway hairs escaping the edges and catching the light as a soft luminous halo, silky sheen along the strand length with soft overlapping fur depth, thick generous coat giving a plump rounded softened volume, bright fresh luminous pastel color (soft pink / baby blue / lilac / mint / butter yellow / peach tones — light and airy and cheerful, never dark or muddy), gentle tonal gradation slightly deeper at the roots and brighter at the tips, a FEW small thin delicate flowers tucked sparsely into the fur as subtle accents (strictly only about 3-5 tiny fine-petaled blossoms nestled among the strands, never crowding or obscuring the form, never a bouquet or floral pattern), silhouette of ${keyword} remaining instantly recognizable despite the soft fur, soft bright diffused studio lighting flattering the silky strands and edge halo, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium product photography quality, most naturally recognizable angle for ${keyword}, absolutely no text no logo no watermark no stand no background elements.`;
+A photorealistic premium 3D render of ${keyword}, re-engineered entirely as a soft fluffy furball completely covered in LONG silky flowing fur, long individually-resolved hair strands with soft directional flow grouping into natural wisps and locks, strands cascading and draping over the form's contours with gentle gravity, wispy feathery flyaway hairs escaping the edges and catching the light as a soft luminous halo, silky sheen along the strand length with soft overlapping fur depth, thick generous coat giving a plump rounded softened volume, bright fresh luminous pastel color (soft pink / baby blue / lilac / mint / butter yellow / peach tones — light and airy and cheerful, never dark or muddy), gentle tonal gradation slightly deeper at the roots and brighter at the tips, a FEW small thin delicate flowers tucked sparsely into the fur as subtle accents (strictly only about 3-5 tiny fine-petaled blossoms nestled among the strands, never crowding or obscuring the form, never a bouquet or floral pattern), silhouette of ${keyword} remaining instantly recognizable despite the soft fur, soft bright diffused studio lighting flattering the silky strands and edge halo, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium product photography quality, most naturally recognizable angle for ${keyword}, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface), no logo no watermark no stand no background elements.`;
 }
 
 const BRICOLAGE_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Handmade Bricolage' aesthetic — every subject rebuilt as a lovingly hand-fabricated studio sculpture, assembled in an artist's workshop from white-painted plywood, foam core, cardboard, scrap plastic and sheet metal, held together with generous amounts of tan packing tape, duct tape and visible hardware. The charm lies entirely in the honest, imperfect, obviously-handmade craft.
@@ -1959,47 +1965,46 @@ Object: "${keyword}"
 A photorealistic premium 3D render of ${keyword}, re-engineered entirely as a hand-fabricated studio sculpture built from humble workshop scrap, dominant hand-brushed white-painted plywood and foam core panels with visible brush strokes and uneven paint coverage and small drips, raw cut plywood edges left exposed showing warm tan blonde laminated layers as the key accent, cardboard and scrap plastic sheet and thin bent sheet metal parts, tan amber packing tape and silver-grey duct tape applied generously and repeatedly in wrinkled bubbled overlapping layers with hand-torn ends and slightly askew strips, exposed everyday hardware including bolts wing nuts washers wood screws hose clamps and zip ties, honest maker's marks like un-erased pencil layout lines glue squeeze-out scuffs and small dents, hand-cut slightly CROOKED geometry with panels meeting at imperfect angles and small gaps and misalignments at the joints, affectionate skilled wonkiness rather than sloppiness, sturdy and intentional despite the imperfection, muted workshop-honest palette of warm white and tan wood and silver tape with occasional small red accents, silhouette of ${keyword} remaining instantly recognizable, clean even studio lighting revealing brush strokes and tape wrinkles and wood grain, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium art documentation photography quality, most naturally recognizable angle for ${keyword}, absolutely no brand logos no company marks no watermark no display stand no plinth no background elements.`;
 }
 
-const GLASS_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Frosted Glass UI' aesthetic — clean, clear, modern fintech-app icon assets made of translucent frosted glass panels. Think premium mobile app illustration assets: light, airy, calm and immaculately clean.
+const GLASS_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Frosted Glass UI' aesthetic — clean, clear, modern fintech-app 3D icon assets made of translucent blue glass. Think premium mobile app illustration assets: dimensional solid glass ornaments, light, airy, calm and immaculately clean. A single icon, alone on white.
 
 ABSOLUTE FROSTED GLASS DESIGN RULES (always apply without exception):
 
 0. [Universal Asset Conversion]
 Regardless of input category (animal, food, vehicle, object, abstract concept, etc.), disregard its real-world physical properties entirely. Every input must be re-drawn as a SIMPLIFIED, SYMBOLIC UI-icon interpretation and then built from frosted glass panels. This is an app icon asset, not a realistic miniature of the subject.
 
-1. [Flat Slab Construction — NOT a Volumetric Sculpture]
-This is the single most important rule and it differs from ordinary 3D rendering:
-- The form must read as FLAT, LAYERED PANELS with modest extruded thickness — like thin glass slabs or cards standing in space
-- It is NOT a fully rounded volumetric object, NOT a chunky toy, NOT a sculpted miniature. Do not inflate the subject into a 3D body
-- Each panel has a clearly visible, crisp edge thickness — a shallow extrusion, roughly the thickness of a thin card or a stack of a few sheets
-- Depth comes from LAYERING and slight tilt, not from volume: shapes float and overlap at gentle angles
-- Silhouette is essentially the flat 2D icon shape, given just enough thickness to feel physical
+1. [Volumetric 3D Object — Real Depth and Density]
+This is the single most important rule:
+- Render a proper THREE-DIMENSIONAL object with real volume, depth and thickness — a solid glass sculpture of the icon, NOT a thin flat panel, NOT a sticker, NOT a cut-out card standing on edge
+- The form has genuine front-to-back depth: rounded volumes, extruded bodies, believable chunky mass that you could pick up and turn in your hand
+- Because the glass is translucent, the object's OWN internal thickness is visible — you can see softly into and through its body, and where the glass is thicker the color deepens, giving it density and richness
+- Give the icon a dimensional, sculpted, filled-out form rather than a flat silhouette with a thin edge. Think of a small solid glass ornament, not a pane of glass
+- Sits at a natural three-quarter angle so its depth and volume read clearly
 
 2. [Frosted Glass Material — Absolute Lock]
-- Translucent frosted glass: semi-transparent, with soft internal light diffusion and a gentle blur, so overlapping layers show through each other softly out of focus
-- Surface is perfectly smooth and immaculate — but with a SOFT MATTE SHEEN, NOT a wet gloss. Absolutely no sharp mirror-like specular hot spots, no glossy plastic highlights, no chrome
+- Translucent frosted glass: semi-transparent, with soft internal light diffusion and a gentle blur, so light scatters softly and out of focus inside the icon's own body
+- Surface is perfectly smooth and immaculate with a clean, gentle GLASSY SHEEN — soft glass highlights and a subtle sense of polish, but calm and refined, NOT a harsh mirror finish, not oily plastic, not chrome. A tasteful modern glass look
 - Light passes through and scatters gently inside the glass, brighter where layers overlap
 - Crisp, thin, slightly brighter light catching along the extruded edges and rounded corners, with a faint cool iridescent rim
 - Clean and pristine — no scratches, dust, fingerprints, cracks or wear
 
-3. [Layered Composition — Icon Stays In Front and Fully Readable]
-- The element that DEFINES the subject — the icon shape itself — must be the FRONT-MOST layer. It is never covered, veiled, tinted or blurred by anything placed on top of it
-- Absolutely NO translucent panel, sheet, card or pane floating IN FRONT of the icon. Nothing may obscure, wash out or soften the subject's defining features. The viewer must recognise the subject instantly at a glance
-- Supporting frosted panels and abstract shapes sit BEHIND the icon as backdrop accents, peeking out around its edges — offset and slightly rotated so they add depth without hiding anything
-- Where a background panel passes behind the icon it may show through the icon's own translucent glass softly and out of focus — that layered see-through richness is welcome, because it reads THROUGH the icon rather than ON TOP of it
-- Keep it to 2 or 3 elements total, calm, balanced and uncluttered — never busy
+3. [Single Icon Only — No Surrounding Container or Tile]
+- Render ONLY the icon shape of the subject ITSELF, sculpted directly from glass. There is exactly ONE object in the frame and it is the icon's own silhouette
+- CRITICAL: do NOT place the icon on, inside, or in front of any rounded-square tile, app-icon plate, card, badge, button base, frame, backing panel or container of ANY kind. The subject's own shape IS the whole object — it is not mounted on a squircle
+- The car is a glass car; the rocket is a glass rocket; the envelope is a glass envelope — the outline of the object itself is the outer edge of the render. Nothing boxes it in or sits behind it
+- Absolutely NO extra panels, cards, sheets, plates, tiles, rounded-rectangle backings, backdrop shapes or secondary elements — not around it, not in front, not behind, not beside, not overlapping. None
+- Nothing may cover, veil, tint, blur, frame or enclose the icon. Its full silhouette is completely visible and unobstructed
+- The viewer sees just the clean glass icon floating alone on white. Instantly recognizable at a glance
 
-4. [Camera — Straight-On Front View]
-- The camera looks at the icon HEAD-ON, square to its face. Front elevation only
-- NO three-quarter view, no isometric angle, no rotating the subject away from the viewer, no looking down or up at it
-- The icon's face is parallel to the picture plane and fully presented to the camera
-- Only a very mild perspective is allowed, just enough that a thin sliver of the extruded side edge reads at the outer contours and the layer separation is felt
-- Gentle rotation WITHIN the picture plane (tilting a panel like a tilted card, still facing the camera) is allowed for liveliness
+4. [Camera — Three-Quarter Angle to Reveal Depth]
+- Shoot the icon at a natural THREE-QUARTER angle (slightly rotated and slightly above), the standard hero angle for premium 3D icon assets, so the object's volume, thickness and depth are all clearly visible
+- The angle should make the object read as a solid dimensional thing floating in space, with its sides and depth on show — never a flat straight-on face
+- A gentle, believable perspective; keep it clean and iconic, not extreme or distorted
 
-5. [Color]
-- Cool, clean, luminous palette: periwinkle blue, soft violet, lavender, sky blue, white
-- Smooth soft gradients within each panel, generally lighter toward the top and edges
-- Optional small accent in a deeper blue or soft pink, used sparingly
-- Overall impression must be LIGHT, CLEAR and FRESH — never dark, never heavy, never neon, never candy-glossy
+5. [Color — Blue-Centric]
+- Cool, clean, luminous BLUE palette: bright cobalt/azure blue as the dominant color, with lighter sky blue, soft periwinkle and translucent icy white-blue
+- Smooth soft gradients within the form, generally deeper saturated blue in the thicker/lower areas and lighter, almost white, toward the top, edges and thinner translucent parts
+- Blue is clearly the leading color; white/light-blue provides the fresh translucent contrast. Avoid heavy purple or warm tones
+- Overall impression must be LIGHT, CLEAR, FRESH and premium — never dark, never heavy, never neon, never candy-glossy
 
 6. [Rounded Geometry]
 Generous, evenly rounded corners and softened edges throughout — friendly, modern, calm UI geometry. No sharp points, no aggressive angles.
@@ -2021,7 +2026,59 @@ ${imageNote}
 Now generate the following as a Frosted Glass UI icon asset:
 Object: "${keyword}"
 
-A premium 3D app icon asset of ${keyword}, simplified into a clean symbolic UI-icon shape and built from translucent frosted glass panels, FLAT LAYERED SLAB construction with modest crisp extruded edge thickness like thin glass cards (NOT a rounded volumetric object, NOT a chunky toy, NOT a sculpted miniature — depth comes from layering rather than volume), the ${keyword} icon shape itself is the FRONT-MOST layer and stays completely unobstructed and instantly recognizable (absolutely NO translucent panel or sheet or card floating in front of it, nothing covering or veiling or blurring its defining features), 2 to 3 elements total with supporting frosted panels and abstract shapes sitting BEHIND the icon as backdrop accents peeking out around its edges slightly offset and rotated, background panels reading softly and out of focus THROUGH the icon's own translucent glass rather than on top of it, straight-on head-on front view with the icon's face square and parallel to the camera (NO three-quarter view, no isometric angle, no looking down or up, only a very mild perspective so a thin sliver of the extruded side edge reads at the outer contours), semi-transparent frosted glass with soft internal light diffusion and gentle blur, immaculately smooth surface with a SOFT MATTE SHEEN and absolutely no wet gloss or mirror specular hot spots, thin brighter light catching along the extruded edges and rounded corners with a faint cool iridescent rim, cool clean luminous palette of periwinkle blue and soft violet and lavender and white with smooth soft gradients, generous evenly rounded corners and softened edges, calm balanced uncluttered composition, light and clear and fresh feeling, soft bright even diffused studio lighting, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft diffused blurred drop shadow, 1:1 square format, icon occupying 75-80% of frame, premium mobile app illustration asset quality, absolutely no text no letters no numbers no logo no watermark no stand no background elements.`;
+A premium 3D app icon asset of ${keyword}, simplified into a clean symbolic UI-icon shape and rendered as a VOLUMETRIC three-dimensional object made of translucent blue glass, a solid dimensional glass sculpture with real front-to-back depth and thickness and believable chunky mass (NOT a thin flat panel, NOT a sticker, NOT a cut-out card standing on edge, NOT a flat silhouette — give it filled-out rounded volume like a small solid glass ornament), the translucent glass revealing the object's own internal thickness so you can see softly into and through its body with the color deepening where the glass is thicker giving it density and richness, ONLY the ${keyword} icon shape ITSELF sculpted directly from glass and nothing else — CRITICAL: the object is NOT mounted on or placed inside any rounded-square tile or app-icon plate or card or badge or button base or frame or backing panel or container of any kind, the subject's own outline IS the whole object and is the outer edge of the render (a glass car is just a glass car, not a car sitting on a squircle), absolutely NO extra panels or cards or sheets or plates or tiles or rounded-rectangle backings or backdrop shapes or secondary elements around it in front of behind beside or overlapping it, nothing covering or veiling or enclosing or boxing in the icon, the icon's full form completely visible and instantly recognizable, shot at a natural THREE-QUARTER angle slightly rotated and slightly from above so the volume and depth and sides all read clearly (the standard hero angle for premium 3D icon assets, never a flat straight-on face), semi-transparent glass with soft internal light diffusion, immaculately smooth surface with a clean gentle GLASSY SHEEN and soft refined glass highlights (not a harsh mirror finish, not oily plastic, not chrome), thin brighter light catching along the rounded edges with a faint cool rim, cool clean luminous BLUE palette with bright cobalt azure blue as the dominant color plus lighter sky blue and soft periwinkle and translucent icy white-blue, smooth soft gradients deeper saturated blue in the thicker lower areas and lighter almost white toward the top and edges and thinner translucent parts, generous evenly rounded corners and softened edges, calm and uncluttered, light and clear and fresh feeling, soft bright even diffused studio lighting, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft diffused blurred drop shadow, 1:1 square format, icon occupying 75-80% of frame, premium mobile app illustration asset quality, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface), no logo no watermark no stand no background elements.`;
+}
+
+const CLAY_STYLE_PROMPT = `You are an elite '3D Visual Design Director' specializing in the 'Claymation' aesthetic — every subject sculpted by hand from colorful modeling clay (plasticine), in the charming stop-motion style of Wallace & Gromit and Aardman Animations. The charm lies in the visible handmade craft: fingerprints, tool marks and gentle imperfection.
+
+ABSOLUTE CLAY DESIGN RULES (always apply without exception):
+
+0. [Universal Asset Conversion]
+Regardless of input category (animal, food, vehicle, object, abstract concept, etc.), disregard its real-world physical properties entirely. Every input must be re-sculpted as a handmade modeling-clay figure. The subject's iconic silhouette is preserved, but its entire substance becomes plasticine clay.
+
+1. [Premium 3D Structure]
+All outputs must be high-fidelity, photorealistic 3D renders of a real physical clay object. Flat 2D graphics are strictly prohibited. It must look like an actual clay model sitting on a surface — tangible, soft, weighty and touchable.
+
+2. [Clay Material — Absolute Lock]
+The ENTIRE object must be made of colorful modeling clay / plasticine:
+- Soft, dense, slightly oily plasticine with a gentle SEMI-GLOSS sheen — the characteristic soft waxy shine of clay under studio light, never fully matte, never wet high-gloss
+- Clearly visible HANDMADE surface texture: fingerprints, thumb-press dents, smoothing-tool streaks, tiny scratches, faint seams where clay pieces were joined, and small lumps or bumps
+- Soft rounded edges and corners everywhere — clay cannot hold a razor-sharp edge; everything is gently rounded and hand-smoothed
+- Different colors are made from different clay, pressed and blended together, with slightly imperfect seams between color areas and occasional tiny smudges of one color into another
+- The forms are pleasingly chunky and simplified, as hands would shape them
+
+3. [Handmade Charm — The Core Look]
+- The sculpting is skilled but honestly imperfect — slightly asymmetric, lovingly wonky, with the warmth of something shaped by hand rather than machine
+- Little Aardman-style details welcome where they suit the subject: simple ping-pong-ball style eyes with clay lids, an over-bite grin, expressive chunky features
+- The imperfection is affectionate and characterful, never sloppy or broken
+- Despite the simplification, the subject stays instantly recognizable
+
+4. [Color]
+- Bright, warm, friendly modeling-clay colors — the palette of a plasticine set (warm off-white/cream, terracotta browns, olive green, dusty blue, soft red, mustard)
+- Solid hand-mixed clay colors, each area its own piece of clay, with the soft slightly uneven tone real plasticine has
+- Warm and inviting overall — the cozy tactile feel of a stop-motion set
+
+5. [Silhouette Legibility]
+Despite the chunky handmade simplification, the subject must remain instantly recognizable. The clay adds softness and charm to the form — it must never blur or hide the essential shape.
+
+6. [Text, Logo, Stand — Zero Tolerance]
+Absolutely NO text, letters, words, numbers, branding, logos, or watermarks anywhere. NO stands, plinths, bases, or background elements. The background MUST be pure solid white #FFFFFF (RGB 255,255,255) with absolutely no tint — no cream, no ivory, no beige, no off-white, no gray studio falloff, no gradient. Only the clay figure and a soft, subtle floor shadow.
+
+7. [No Dynamic Effects & Singular Unit]
+Static, freshly-sculpted form only. No smoke, sparks, motion blur, or flying bits of clay. Exactly one object, centered. Visual mass must occupy 75-80% of the 1:1 square frame. Soft, warm, diffused studio lighting like a stop-motion set, revealing the clay's semi-gloss sheen and the fingerprint texture. Only the object and a soft floor shadow permitted.`;
+
+function buildClayPrompt(keyword, hasRefImage) {
+  const imageNote = hasRefImage
+    ? `\nReference Image Provided: Analyze its structural composition, silhouette, and volume. Use this as the primary 3D form blueprint — then apply ALL Clay rules unconditionally on top of it.`
+    : `\nForm Analysis: Identify the most iconic, recognizable 3D form and silhouette for "${keyword}". Use this as the structural blueprint, then re-sculpt it entirely from modeling clay.`;
+
+  return `${CLAY_STYLE_PROMPT}
+${imageNote}
+
+Now generate the following as a handmade Claymation figure:
+Object: "${keyword}"
+
+A photorealistic premium 3D render of ${keyword}, hand-sculpted entirely from colorful modeling clay plasticine in the charming stop-motion style of Wallace & Gromit and Aardman Animations, soft dense slightly oily plasticine with a gentle semi-gloss waxy sheen under warm studio light (never fully matte never wet high-gloss), clearly visible handmade surface texture with fingerprints thumb-press dents smoothing-tool streaks tiny scratches and faint joint seams, soft rounded hand-smoothed edges everywhere with no razor-sharp corners, different clay colors pressed and blended together with slightly imperfect seams and occasional tiny smudges between color areas, pleasingly chunky simplified hand-shaped forms, skilled but honestly imperfect sculpting that is slightly asymmetric and lovingly wonky with the warmth of something shaped by hand, bright warm friendly plasticine palette of warm cream and terracotta brown and olive green and dusty blue and soft red with the soft slightly uneven tone of real modeling clay, silhouette of ${keyword} remaining instantly recognizable, soft warm diffused stop-motion studio lighting revealing the semi-gloss sheen and fingerprint texture, pure solid white background #FFFFFF (RGB 255,255,255, clean bright pure white with no cream/beige/ivory/gray tint and no gradient), soft subtle floor drop shadow, 1:1 square format, object occupying 75-80% of frame, premium claymation product photography quality, most naturally recognizable angle for ${keyword}, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface), no logo no watermark no stand no background elements.`;
 }
 
 function buildPrompt(keyword, hasRefImage) {
@@ -2035,7 +2092,7 @@ ${imageNote}
 Now generate the following object, following every rule above without exception:
 Object: "${keyword}"
 
-A professional premium 3D icon of ${keyword}, predominantly CLEAN TRANSLUCENT WHITE frosted polycarbonate shell (white is the dominant color — NOT purple, NOT lavender), only a very minimal barely-visible iridescent shimmer strictly at the sharpest edges and corners (less than 20% of surface), highly detailed visible internal PCB circuitry and chips (orange/green chipset accents), colorful primary accent buttons (red/blue/green/yellow), Y2K retro-futuristic tech aesthetic, soft studio lighting, isolated on pure solid white background #FFFFFF (RGB 255,255,255, no cream/beige/off-white/gray tint, no gradient), soft subtle floor shadow only, commercial product photography, 1:1 square, object occupying 75-80% of frame, 8k resolution, premium industrial design, absolutely no text no logo no watermark no stand no background elements, camera angle: left-facing 3/4 view — the object faces toward the LEFT side of the frame, viewed from slightly front-right, elevated perspective (like the reference balloon dog and Gundam head). The left side of the object is more visible than the right. Natural three-quarter left-facing composition.`;
+A professional premium 3D icon of ${keyword}, predominantly CLEAN TRANSLUCENT WHITE frosted polycarbonate shell (white is the dominant color — NOT purple, NOT lavender), only a very minimal barely-visible iridescent shimmer strictly at the sharpest edges and corners (less than 20% of surface), highly detailed visible internal PCB circuitry and chips (orange/green chipset accents), colorful primary accent buttons (red/blue/green/yellow), Y2K retro-futuristic tech aesthetic, soft studio lighting, isolated on pure solid white background #FFFFFF (RGB 255,255,255, no cream/beige/off-white/gray tint, no gradient), soft subtle floor shadow only, commercial product photography, 1:1 square, object occupying 75-80% of frame, 8k resolution, premium industrial design, CRITICAL absolutely NO text NO letters NO words NO numbers NO writing NO labels NO captions NO typography of any kind anywhere on the object or image (do not render the keyword as text, do not write any name or word on the surface), no logo no watermark no stand no background elements, camera angle: left-facing 3/4 view — the object faces toward the LEFT side of the frame, viewed from slightly front-right, elevated perspective (like the reference balloon dog and Gundam head). The left side of the object is more visible than the right. Natural three-quarter left-facing composition.`;
 }
 
 // ── 스타일 디스패치 (분기 한 곳에서만 관리) ──────────────────
@@ -2048,6 +2105,7 @@ const STYLE_RULE_NAMES = {
   furball:   'Furball',
   bricolage: 'Handmade Bricolage',
   glass:     'Frosted Glass UI',
+  clay:      'Claymation',
 };
 
 const STYLE_BUILDERS = {
@@ -2059,6 +2117,7 @@ const STYLE_BUILDERS = {
   furball:   buildFurballPrompt,
   bricolage: buildBricolagePrompt,
   glass:     buildGlassPrompt,
+  clay:      buildClayPrompt,
 };
 
 function buildStylePrompt(keyword, hasRefImage) {
@@ -2126,6 +2185,7 @@ const STYLE_LABELS = {
   furball:    '🌸 Furball — 장모 털뭉치',
   bricolage:  '🚀 Bricolage — 핸드메이드 스페이스 공작',
   glass:      '🫧 Glass 990 — 반투명 블러 플랫 3D',
+  clay:       '🐑 Clay — 월레스와 그로밋 클레이',
 };
 
 document.querySelectorAll('.style-btn:not(:disabled)').forEach(btn => {
@@ -2290,11 +2350,19 @@ const CONCEPT_PROMPTS = {
 
 2~3문장으로 짧고 명확하게. 반드시 완전한 문장으로 끝낼 것.`,
 
-  glass: (kw) => `"${kw}"를 앱 UI 아이콘으로 단순화해서 만들 때 어떤 형태와 구성인지 설명해줘.
+  glass: (kw) => `"${kw}"를 입체감 있는 3D 앱 아이콘으로 단순화해서 만들 때 어떤 형태와 구도인지 설명해줘.
 
 재질, 유리, 색상, 투명도 설명은 하지 말고, 아래 두 가지만 한국어로 간결하게:
-1. 형태 — "${kw}"를 UI 아이콘 디자이너가 단순화한다면 어떤 상징적인 평면 실루엣이 가장 알아보기 쉬운지
-2. 구성 — 그 아이콘 형태를 맨 앞에 두고, 뒤쪽에 어떤 보조 도형을 어떻게 겹쳐 두면 깊이감이 생길지 (아이콘을 가리지 않는 선에서)
+1. 형태 — "${kw}"를 UI 아이콘 디자이너가 단순화하되, 두께와 부피가 있는 입체 오브제로 만든다면 어떤 형태가 가장 알아보기 쉬운지
+2. 구도 — 입체감이 잘 드러나는 각도 (보통 사선 3/4 뷰)
+
+2~3문장으로 짧고 명확하게. 반드시 완전한 문장으로 끝낼 것.`,
+
+  clay: (kw) => `"${kw}"를 손으로 빚은 컬러 찰흙(클레이) 인형으로 만들 때 어떤 형태와 구도인지 설명해줘.
+
+재질, 찰흙, 손자국, 색상 설명은 하지 말고, 아래 두 가지만 한국어로 간결하게:
+1. 형태 — "${kw}"의 가장 상징적인 실루엣과, 손으로 뭉툭하게 단순화해 빚었을 때의 주요 덩어리 구성
+2. 구도 — 어떤 각도가 가장 잘 인식되는지 (정면/측면/사선/위 등)
 
 2~3문장으로 짧고 명확하게. 반드시 완전한 문장으로 끝낼 것.`,
 };
@@ -2886,14 +2954,16 @@ function bindResultEvents() {
     btn.onclick = () => {
       const url = btn.dataset.url;
       const kw = btn.dataset.keyword;
-      if (btn.dataset.action === 'original') download(url, `${kw}_icon.png`);
-      else removeBgDownloadOnly(btn, url, kw);
+      const st = btn.dataset.style || currentStyle;
+      if (btn.dataset.action === 'original') download(url, buildFileName(st, kw, 'original'));
+      else removeBgDownloadOnly(btn, url, kw, st);
     };
   });
 }
 
 // 3. 이미지 팝업
-function openImagePopup(imageUrl, keyword) {
+function openImagePopup(imageUrl, keyword, style) {
+  const st = style || currentStyle;
   const overlay = document.createElement('div');
   overlay.className = 'img-popup-overlay';
   overlay.innerHTML = `
@@ -2920,14 +2990,14 @@ function openImagePopup(imageUrl, keyword) {
   // 원본 다운로드
   overlay.querySelector('#popupDlOriginal').addEventListener('click', (e) => {
     e.stopPropagation();
-    download(imageUrl, `${keyword}_icon.png`);
+    download(imageUrl, buildFileName(st, keyword, 'original'));
   });
 
   // 투명 PNG 다운로드
   overlay.querySelector('#popupDlTransparent').addEventListener('click', (e) => {
     e.stopPropagation();
     const btn = overlay.querySelector('#popupDlTransparent');
-    removeBgDownloadOnly(btn, imageUrl, keyword);
+    removeBgDownloadOnly(btn, imageUrl, keyword, st);
   });
 
   // 닫기
@@ -3030,13 +3100,14 @@ function removeWhiteBackground(imageUrl, tolerance = BG_TOLERANCE) {
 }
 
 // 미리보기는 원본 유지 — 다운로드만
-async function removeBgDownloadOnly(btn, imageUrl, keyword) {
+async function removeBgDownloadOnly(btn, imageUrl, keyword, style) {
+  const st = style || currentStyle;
   const originalHtml = btn.innerHTML;
   btn.textContent = '처리 중...';
   btn.disabled = true;
   try {
     const url = await removeWhiteBackground(imageUrl);
-    download(url, `${keyword}_transparent.png`);
+    download(url, buildFileName(st, keyword, 'transparent'));
   } catch (err) {
     alert('투명 PNG 처리에 실패했어요: ' + err.message);
   } finally {
@@ -3086,6 +3157,7 @@ function compressToThumbnail(imageUrl, size = 200) {
 
 async function addToHistory(imageUrl, keyword) {
   const id = `img_${Date.now()}`;
+  const style = currentStyle;
 
   // 원본은 메모리 캐시에 보관
   fullImageCache[id] = imageUrl;
@@ -3093,7 +3165,7 @@ async function addToHistory(imageUrl, keyword) {
   // 썸네일만 localStorage에 저장
   const thumbnail = await compressToThumbnail(imageUrl, 200);
 
-  history.unshift({ id, thumbnail, keyword, ts: Date.now() });
+  history.unshift({ id, thumbnail, keyword, style, ts: Date.now() });
   if (history.length > 20) history = history.slice(0, 20);
 
   // localStorage 저장 실패 시 오래된 것부터 제거하며 재시도
@@ -3154,13 +3226,14 @@ function renderHistory() {
       const item = history[parseInt(btn.dataset.index)];
       const url = (item.id && fullImageCache[item.id]) || item.thumbnail || item.imageUrl;
       const kw = item.keyword;
+      const st = item.style || currentStyle;
 
       if (btn.dataset.type === 'original') {
-        download(url, `${kw}_icon.png`);
+        download(url, buildFileName(st, kw, 'original'));
       } else {
         btn.disabled = true;
         try {
-          download(await removeWhiteBackground(url), `${kw}_transparent.png`);
+          download(await removeWhiteBackground(url), buildFileName(st, kw, 'transparent'));
         } catch (err) {
           alert('투명 PNG 처리에 실패했어요: ' + err.message);
         } finally {
@@ -3185,6 +3258,32 @@ document.getElementById('clearHistoryBtn').addEventListener('click', () => {
 renderHistory();
 
 // ── 유틸 ───────────────────────────────────────────────────
+// 파일명용 스타일 이름 (이모지·설명 없는 깔끔한 표기)
+const STYLE_FILE_NAMES = {
+  gameboy:   'GameBoy',
+  enamel:    'EnamelPin',
+  patchwork: 'Patchwork',
+  chocolate: 'ChocoCake',
+  brick:     'Brick',
+  furball:   'Furball',
+  bricolage: 'Bricolage',
+  glass:     'Glass990',
+  clay:      'Clay',
+};
+
+// [스타일이름_키워드_형식] 형식의 파일명 생성
+// kind: 'original' | 'transparent'
+function buildFileName(styleKey, keyword, kind) {
+  const style = STYLE_FILE_NAMES[styleKey] || 'Icon';
+  // 파일명에 못 쓰는 문자 정리, 공백은 -로
+  const kw = String(keyword || 'image')
+    .trim()
+    .replace(/[\\/:*?"<>|]/g, '')
+    .replace(/\s+/g, '-') || 'image';
+  const fmt = kind === 'transparent' ? '투명PNG' : '일반PNG';
+  return `${style}_${kw}_${fmt}.png`;
+}
+
 function download(dataUrl, filename) {
   const a = document.createElement('a');
   a.href = dataUrl; a.download = filename;
